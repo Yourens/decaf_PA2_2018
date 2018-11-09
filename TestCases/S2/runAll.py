@@ -22,6 +22,8 @@ def read_txt_file(filename):
 
 def main():
     decaf_jar = os.path.join('..', '..', 'result', 'decaf.jar')
+    # in case output dir not exists
+    os.makedirs('output', exist_ok=True)
     names = sys.argv[1:]
     if not names:
         names = sorted(os.listdir('.'))
